@@ -10,9 +10,8 @@ namespace Day7
     class Program
     {
         static void Main(string[] args)
-        {
-            string content = File.ReadAllText(@"C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\input.txt");
-            string[] lines = content.Split(new string[] { "$ " }, StringSplitOptions.RemoveEmptyEntries).Skip(1).ToArray();
+        { 
+            string[] lines = File.ReadAllText(@"..\..\input.txt").Split(new string[] { "$ " }, StringSplitOptions.RemoveEmptyEntries).Skip(1).ToArray(); // We don't need "$ cd /" in our lives
             DeviceDirectory tree = new DeviceDirectory("/", null);
             DeviceDirectory currentDirectory = tree;
             const int TOTAL_SIZE = 70000000;

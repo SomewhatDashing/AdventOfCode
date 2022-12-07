@@ -11,7 +11,7 @@ namespace Day6
     {
         static void Main(string[] args)
         {
-            string content = File.ReadAllText(@"C:\Users\A365282\source\repos\AdventOfCode_2022\Day6\input.txt");
+            string content = File.ReadAllText(@"..\..\input.txt");
 
             Console.WriteLine($"Marker at: {FindMarker(4, content)}");
             Console.WriteLine($"Message at: {FindMarker(14, content)}");

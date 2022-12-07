@@ -11,8 +11,7 @@ namespace Day2
     {
         static void Main(string[] args)
         {
-            string content = File.ReadAllText(@"C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\input.txt");
-            string[] lines = content.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+            string[] lines = File.ReadAllText(@"..\..\input.txt").Split(new string[] { "\r\n" }, StringSplitOptions.None);
             List<string> choices;
             int totalScore1 = 0, totalScore2 = 0;
 

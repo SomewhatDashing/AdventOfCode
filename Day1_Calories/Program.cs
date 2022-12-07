@@ -11,8 +11,7 @@ namespace Day1_Calories
     {
         static void Main(string[] args)
         {
-            string content = File.ReadAllText(@"C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\input.txt");
-            string[] groups = content.Split(new string[] { "\r\n\r\n" }, StringSplitOptions.None);
+            string[] groups = File.ReadAllText(@"..\..\input.txt").Split(new string[] { "\r\n\r\n" }, StringSplitOptions.None);
             List<int> groupValues = new List<int>();
             int entrySum;
 
