@@ -1,0 +1,7 @@
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\bin\Debug\Day2.exe.config
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\bin\Debug\Day2.exe
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\bin\Debug\Day2.pdb
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2_RockPaperScissors.csproj.CoreCompileInputs.cache
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2.exe
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2.pdb
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2_RockPaperScissors.csproj.AssemblyReference.cache

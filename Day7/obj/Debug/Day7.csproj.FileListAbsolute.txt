@@ -1,0 +1,7 @@
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\bin\Debug\Day7.exe.config
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\bin\Debug\Day7.exe
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\bin\Debug\Day7.pdb
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\obj\Debug\Day7.csproj.AssemblyReference.cache
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\obj\Debug\Day7.csproj.CoreCompileInputs.cache
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\obj\Debug\Day7.exe
+C:\Users\A365282\source\repos\AdventOfCode_2022\Day7\obj\Debug\Day7.pdb
