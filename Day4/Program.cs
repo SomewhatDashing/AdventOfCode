@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace Day4
 {
@@ -7,29 +8,21 @@ namespace Day4
     {
         static void Main(string[] args)
         {
-            string[] lines = File.ReadAllText(@"..\..\input.txt").Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
-            string[] group;
-            int min1, min2, max1, max2;
-            int overlaps1 = 0, overlaps2 = 0;
+            string[] group, lines = File.ReadAllText(@"..\..\input.txt").Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            int contains = 0, intersects = 0;
 
             foreach (string line in lines)
             {
-                group = line.Split(',');
-
-                min1 = int.Parse(group[0].Split('-')[0]);
-                min2 = int.Parse(group[1].Split('-')[0]);
-                max1 = int.Parse(group[0].Split('-')[1]);
-                max2 = int.Parse(group[1].Split('-')[1]);
-
-                if ((min1 >= min2 && max1 <= max2) || (min2 >= min1 && max2 <= max1))
-                    overlaps1++;
-
-                if ((min1 >= min2 && min1 <= max2) || (min2 >= min1 && min2 <= max1) || (max1 >= min2 && max1 <= max2) || (max2 >= min1 && max2 <= max1))
-                    overlaps2++;
+                group = line.Split(new char[] {'-', ','});
+                if (Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList().Union(Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList()).Count() == int.Parse(group[1]) - int.Parse(group[0]) + 1 || Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList().Union(Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList()).Count() == int.Parse(group[3]) - int.Parse(group[2]) + 1)
+                    contains++;
+                
+                if (Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList().Intersect(Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList()).Count() > 0 || Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList().Intersect(Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList()).Count() > 0)
+                    intersects++;
             }
 
-            Console.WriteLine(overlaps1);
-            Console.WriteLine(overlaps2);
+            Console.WriteLine(contains);
+            Console.WriteLine(intersects);
             Console.ReadKey();
         }
     }
