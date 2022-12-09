@@ -10,8 +10,10 @@ namespace Day9
         static void Main(string[] args)
         {
             string[] lines = File.ReadAllText(@"..\..\input.txt").Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
-            List<Point> snake = new List<Point>() { new Point(0, 0), new Point(0, 0) },
-            snake2 = new List<Point>() { new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0), new Point(0, 0) };
+
+            List<Point> snake = new List<Point>(Enumerable.Range(0, 2).Select(x => new Point(0, 0))),
+            snake2 = new List<Point>(Enumerable.Range(0, 10).Select(x => new Point(0, 0)));
+
             Dictionary<char, Point> movements = new Dictionary<char, Point>() { { 'R', new Point(1, 0) }, { 'L', new Point(-1, 0) }, { 'U', new Point(0, 1) }, { 'D', new Point(0, -1) } };
 
             Console.WriteLine($"Part 1: {RunSnakeRunExclamationMark(lines, movements, snake)}");
