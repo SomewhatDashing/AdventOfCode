@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -14,10 +15,13 @@ namespace Day4
             foreach (string line in lines)
             {
                 group = line.Split(new char[] {'-', ','});
-                if (Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList().Union(Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList()).Count() == int.Parse(group[1]) - int.Parse(group[0]) + 1 || Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList().Union(Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList()).Count() == int.Parse(group[3]) - int.Parse(group[2]) + 1)
+                List<int> sample1 = Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList(),
+                          sample2 = Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList();
+
+                if (sample1.Union(sample2).Count() == sample1.Count || sample2.Union(sample1).Count() == sample2.Count)
                     contains++;
                 
-                if (Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList().Intersect(Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList()).Count() > 0 || Enumerable.Range(int.Parse(group[2]), int.Parse(group[3]) - int.Parse(group[2]) + 1).ToList().Intersect(Enumerable.Range(int.Parse(group[0]), int.Parse(group[1]) - int.Parse(group[0]) + 1).ToList()).Count() > 0)
+                if (sample1.Intersect(sample2).Count() > 0  || sample2.Intersect(sample1).Count() > 0)
                     intersects++;
             }
 
