@@ -1,7 +1,0 @@
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\bin\Debug\Day2.exe.config
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\bin\Debug\Day2.exe
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\bin\Debug\Day2.pdb
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2.csproj.AssemblyReference.cache
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2.csproj.CoreCompileInputs.cache
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2.exe
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day2\obj\Debug\Day2.pdb

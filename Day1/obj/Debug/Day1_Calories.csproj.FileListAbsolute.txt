@@ -1,7 +1,0 @@
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\bin\Debug\Day1_Calories.exe.config
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\bin\Debug\Day1_Calories.exe
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\bin\Debug\Day1_Calories.pdb
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\obj\Debug\Day1_Calories.csproj.AssemblyReference.cache
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\obj\Debug\Day1_Calories.csproj.CoreCompileInputs.cache
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\obj\Debug\Day1_Calories.exe
-C:\Users\A365282\source\repos\AdventOfCode_2022\Day1_Calories\obj\Debug\Day1_Calories.pdb
