@@ -19,12 +19,10 @@ namespace Day10
             {
                 string[] fields = instruction.Split(' ');
 
-                if (fields[0] == "noop")
-                    StepProcess(ref processPointer, signalValues, signalValue, crt);
+                StepProcess(ref processPointer, signalValues, signalValue, crt);
                 
                 if (fields[0] == "addx")
                 {
-                    StepProcess(ref processPointer, signalValues, signalValue, crt);
                     StepProcess(ref processPointer, signalValues, signalValue, crt);
                     signalValue += int.Parse(fields[1]);
                 }
@@ -39,7 +37,7 @@ namespace Day10
             crt.Append(new List<int> { signalValue - 1, signalValue, signalValue + 1 }.Contains((processPointer - 1) % 40) ? "#" : ".");
             crt.Append(processPointer % 40 == 0 ? "\r\n" : ""); // Mama didn't raise an animal that skips on formatting
 
-            if (processPointer == 20 || (processPointer + 20) % 40 == 0)
+            if ((processPointer + 20) % 40 == 0)
                 signalValues.Add(signalValue * processPointer);
 
             processPointer++;
