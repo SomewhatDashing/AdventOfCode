@@ -15,7 +15,6 @@ namespace Day10
             int processPointer = 1, signalValue = 1;
             List<int> signalValues = new List<int>();
 
-            // Part 1
             foreach (string instruction in lines)
             {
                 string[] fields = instruction.Split(' ');
